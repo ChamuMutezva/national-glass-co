@@ -1,8 +1,6 @@
-# React + Vite
+# Furnace dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Demo project to track the processing of glass, it is a React project created using vite.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- The charts where created using [Recharts](https://recharts.org/en-US) - The Barchart and Linechart
+- The table was created using [Material-ui Tables](https://mui.com/material-ui/react-table/)
