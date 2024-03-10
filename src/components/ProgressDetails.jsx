@@ -1,4 +1,4 @@
-import { Container ,Grid} from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import { useState } from "react";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
@@ -14,7 +14,14 @@ function ProgressDetails() {
         setLocation(evt.target.value);
     };
     return (
-        <Container component={Grid}  gap={4}>
+        <Container
+            component={Grid}
+            gap={4}
+            style={{
+                maxWidth: "100%", // Override the default max-width
+                padding: 0, // Remove default padding if needed
+            }}
+        >
             <FormControl fullWidth component={Grid} item>
                 <InputLabel id="location-label">Warehouse</InputLabel>
                 <Select
@@ -30,9 +37,11 @@ function ProgressDetails() {
                     <MenuItem value={"cape-town"}>CT</MenuItem>
                 </Select>
             </FormControl>
-            <OneDay />
-            <SevenDays />
-            <Month />
+            <Grid container spacing={2}>
+                <OneDay />
+                <SevenDays />
+                <Month />
+            </Grid>
         </Container>
     );
 }

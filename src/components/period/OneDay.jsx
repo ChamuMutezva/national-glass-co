@@ -5,6 +5,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import { Grid } from "@mui/material";
 
 function createData(name, quantity, measure, percentage) {
     return { name, quantity, measure, percentage };
@@ -19,38 +20,51 @@ const rows = [
 
 export default function OneDay() {
     return (
-        <TableContainer component={Paper} elevation={6}>
-            <Table sx={{ minWidth: 250 }} aria-label="simple table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell align="left">Day</TableCell>
-                        <TableCell />
-                        <TableCell />
-                        <TableCell />
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {rows.map((row) => (
-                        <TableRow
-                            key={row.name}
-                            sx={{
-                                "&:last-child td, &:last-child th": {
-                                    border: 0,
-                                },
-                            }}
-                        >
-                            <TableCell component="th" scope="row">
-                                {row.name}
+        <Grid item md={4} width={"100%"}>
+            <TableContainer component={Paper} elevation={6}>
+                <Table sx={{ minWidth: 250 }} aria-label="simple table">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell
+                                align="left"                                
+                                sx={{
+                                    fontWeight: 800,
+                                }}
+                            >
+                                Day
                             </TableCell>
-                            <TableCell align="right">{row.quantity}</TableCell>
-                            <TableCell align="right">{row.measure}</TableCell>
-                            <TableCell align="right">
-                                {row.percentage}%
-                            </TableCell>
+                            <TableCell />
+                            <TableCell />
+                            <TableCell />
                         </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
-        </TableContainer>
+                    </TableHead>
+                    <TableBody>
+                        {rows.map((row) => (
+                            <TableRow
+                                key={row.name}
+                                sx={{
+                                    "&:last-child td, &:last-child th": {
+                                        border: 0,
+                                    },
+                                }}
+                            >
+                                <TableCell component="th" scope="row">
+                                    {row.name}
+                                </TableCell>
+                                <TableCell align="right">
+                                    {row.quantity}
+                                </TableCell>
+                                <TableCell align="right">
+                                    {row.measure}
+                                </TableCell>
+                                <TableCell align="right">
+                                    {row.percentage}%
+                                </TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </TableContainer>
+        </Grid>
     );
 }
