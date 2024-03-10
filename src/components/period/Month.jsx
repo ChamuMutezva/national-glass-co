@@ -23,9 +23,9 @@ export default function Month() {
             <Table sx={{ minWidth: 250 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
+                        <TableCell align="left">Month</TableCell>
                         <TableCell />
                         <TableCell />
-                        <TableCell align="right">Month</TableCell>
                         <TableCell />
                     </TableRow>
                 </TableHead>

@@ -9,20 +9,23 @@ import ProgressDetails from "./components/ProgressDetails";
 function App() {
     return (
         <Container maxWidth={false}>
-            <h1>Furnace Dashboard</h1>
-
-            <Grid container spacing={2}>
-                <Grid item xs={4}>
-                    <ProgressDetails />
+            <header>
+                <h1>Furnace Dashboard</h1>
+            </header>
+            <main>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} md={3}>
+                        <ProgressDetails />
+                    </Grid>
+                    <Grid item xs={12} md={5}>
+                        <StatusChart />
+                        <WaitTimeChart  />
+                    </Grid>
+                    <Grid item xs={12} md={4} >
+                        <BatchTable />
+                    </Grid>
                 </Grid>
-                <Grid item xs={4}>
-                    <StatusChart />
-                    <WaitTimeChart />
-                </Grid>
-                <Grid item xs={4}>
-                    <BatchTable />
-                </Grid>
-            </Grid>
+            </main>
         </Container>
     );
 }

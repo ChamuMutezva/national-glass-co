@@ -23,10 +23,10 @@ export default function SevenDays() {
             <Table sx={{ minWidth: 250 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
+                        <TableCell align="left">Week</TableCell>
                         <TableCell />
                         <TableCell />
-                        <TableCell align="right">Week</TableCell>
-                        <TableCell />                      
+                        <TableCell />
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -42,10 +42,12 @@ export default function SevenDays() {
                             <TableCell component="th" scope="row">
                                 {row.name}
                             </TableCell>
-                           
+
                             <TableCell align="right">{row.quantity}</TableCell>
                             <TableCell align="right">{row.measure}</TableCell>
-                            <TableCell align="right">{row.percentage}%</TableCell>                           
+                            <TableCell align="right">
+                                {row.percentage}%
+                            </TableCell>
                         </TableRow>
                     ))}
                 </TableBody>

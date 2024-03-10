@@ -5,7 +5,13 @@ import { Box } from "@mui/material";
 
 import { ChartsXAxis } from "@mui/x-charts/ChartsXAxis";
 import { ChartsYAxis } from "@mui/x-charts/ChartsYAxis";
-import { BROKENGLASS, DATATIME, TARGETDATA, TOUGHENEDGLASS } from "../data";
+import {
+    BROKENGLASS,
+    DATATIME,
+    TARGETDATA,
+    TOUGHENEDGLASS,
+    AVERAGEDATA,
+} from "../data";
 import TougheningOptions from "./TougheningOptions";
 
 const series = [
@@ -29,6 +35,13 @@ const series = [
         yAxisKey: "eco",
         color: "red",
         data: TARGETDATA,
+    },
+    {
+        type: "line",
+        label: "average",
+        yAxisKey: "eco",
+        color: "black",
+        data: AVERAGEDATA,
     },
 ];
 
@@ -60,6 +73,7 @@ function StatusChart() {
                 ]}
             >
                 <BarPlot />
+                <LinePlot />
                 <LinePlot />
                 <ChartsXAxis
                     label="Date - Time"

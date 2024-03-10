@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Container ,Grid} from "@mui/material";
 import { useState } from "react";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
@@ -14,8 +14,8 @@ function ProgressDetails() {
         setLocation(evt.target.value);
     };
     return (
-        <Container>
-            <FormControl fullWidth>
+        <Container component={Grid}  gap={4}>
+            <FormControl fullWidth component={Grid} item>
                 <InputLabel id="location-label">Warehouse</InputLabel>
                 <Select
                     labelId="location-label"

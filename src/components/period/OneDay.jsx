@@ -23,9 +23,9 @@ export default function OneDay() {
             <Table sx={{ minWidth: 250 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
+                        <TableCell align="left">Day</TableCell>
                         <TableCell />
                         <TableCell />
-                        <TableCell align="right">Day</TableCell>
                         <TableCell />
                     </TableRow>
                 </TableHead>
