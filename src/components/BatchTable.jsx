@@ -2,6 +2,7 @@
 import { DataGrid } from "@mui/x-data-grid";
 import { Card } from "@mui/material";
 import { DATA } from "../data";
+import { visuallyHidden } from "@mui/utils";
 
 function BatchTable() {
     console.log(DATA);
@@ -19,6 +20,9 @@ function BatchTable() {
     const rows = DATA;
     return (
         <Card elevation={3}>
+            <h2>
+                <span style={visuallyHidden}>Start time </span> 00:00
+            </h2>
             <DataGrid
                 rows={rows}
                 columns={columns}

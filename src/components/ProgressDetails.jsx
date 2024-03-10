@@ -32,9 +32,13 @@ function ProgressDetails() {
                     defaultValue="port-elizabeth"
                     onChange={handleChange}
                 >
-                    <MenuItem value={"johhanesburg"}>JB</MenuItem>
-                    <MenuItem value={"port-elizabeth"}>PE</MenuItem>
-                    <MenuItem value={"cape-town"}>CT</MenuItem>
+                    <MenuItem value={"johanesburg"}>Johanesburg</MenuItem>
+                    <MenuItem value={"port-elizabeth"}>Port Elizabeth</MenuItem>
+                    <MenuItem value={"cape-town"}>Cape Town</MenuItem>
+                    <MenuItem value={"george"}>George</MenuItem>
+                    <MenuItem value={"east-london"}>East London</MenuItem>
+                    <MenuItem value={"pretoria"}>Pretoria</MenuItem>
+                    <MenuItem value={"nelspruit"}>Nelspruit</MenuItem>
                 </Select>
             </FormControl>
             <Grid container spacing={2}>

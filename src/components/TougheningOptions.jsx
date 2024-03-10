@@ -7,7 +7,9 @@ import FormLabel from "@mui/material/FormLabel";
 function TougheningOptions() {
     return (
         <FormControl>
-            <FormLabel id="status-label">Toughening</FormLabel>
+            <FormLabel id="status-label" sx={{ fontSize: "2rem", fontWeight: 800, color: "limegreen" }}>
+                Toughening
+            </FormLabel>
             <RadioGroup
                 aria-labelledby="status-label"
                 defaultValue="1day"
