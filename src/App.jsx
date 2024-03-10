@@ -1,5 +1,5 @@
 import "./App.css";
-// import BarChartStack from "./components/BarChart";
+import logo from "./assets/national-glass-Logo.png";
 import BatchTable from "./components/BatchTable";
 import StatusChart from "./components/StatusChart";
 import { Container, Grid, Typography } from "@mui/material";
@@ -16,14 +16,10 @@ function App() {
                     justifyContent: "center",
                     alignItems: "center",
                     flexDirection: "column",
-                    
                 }}
             >
                 <a href="/" className="logo">
-                    <img
-                        src="./public/national-glass-logo.png"
-                        alt="National glass distribution"
-                    />
+                    <img src={logo} alt="National glass distribution" />
                 </a>
                 <Typography variant="h1" color={"white"} gutterBottom>
                     Furnace Dashboard
