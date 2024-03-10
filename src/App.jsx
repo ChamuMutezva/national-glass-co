@@ -1,5 +1,4 @@
 import "./App.css";
-import logo from "./assets/national-glass-Logo.png";
 import BatchTable from "./components/BatchTable";
 import StatusChart from "./components/StatusChart";
 import { Container, Grid, Typography } from "@mui/material";
@@ -19,7 +18,10 @@ function App() {
                 }}
             >
                 <a href="/" className="logo">
-                    <img src={logo} alt="National glass distribution" />
+                    <img
+                        src={"./National-Glass-Logo.png"}
+                        alt="National glass distribution"
+                    />
                 </a>
                 <Typography variant="h1" color={"white"} gutterBottom>
                     Furnace Dashboard
