@@ -16,13 +16,14 @@ function ProgressDetails() {
     return (
         <Container
             component={Grid}
+            container
             gap={4}
             style={{
-                maxWidth: "100%", // Override the default max-width
-                padding: 0, // Remove default padding if needed
+                maxWidth: "100%", 
+                padding: 0, 
             }}
         >
-            <FormControl fullWidth component={Grid} item>
+            <FormControl fullWidth component={Grid} item marginTop={"2rem"}>  
                 <InputLabel id="location-label">Warehouse</InputLabel>
                 <Select
                     labelId="location-label"
@@ -31,6 +32,7 @@ function ProgressDetails() {
                     label="Warehouse"
                     defaultValue="port-elizabeth"
                     onChange={handleChange}
+                    marginBottom={"1.5rem"}
                 >
                     <MenuItem value={"johanesburg"}>Johanesburg</MenuItem>
                     <MenuItem value={"port-elizabeth"}>Port Elizabeth</MenuItem>
@@ -41,6 +43,7 @@ function ProgressDetails() {
                     <MenuItem value={"nelspruit"}>Nelspruit</MenuItem>
                 </Select>
             </FormControl>
+
             <Grid container spacing={2}>
                 <OneDay />
                 <SevenDays />

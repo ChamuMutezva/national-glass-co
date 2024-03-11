@@ -6,12 +6,14 @@ import {
     CartesianGrid,
     Tooltip,
     Legend,
+    ResponsiveContainer
 } from "recharts";
 
 function WaitTimeChart() {
     const data = [{ name: "2024-03-07", total: 205.38 }];
     return (
-        <BarChart width={400} height={300} data={data}>
+        <ResponsiveContainer width={"100%"} minWidth={250} height={300}>
+        <BarChart width={"100%"} minWidth={250} height={300} data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
                 dataKey="name"
@@ -29,6 +31,7 @@ function WaitTimeChart() {
             <Legend />
             <Bar dataKey="total" fill="#8884d8" />
         </BarChart>
+        </ResponsiveContainer>
     );
 }
 

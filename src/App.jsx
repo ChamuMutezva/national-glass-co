@@ -23,10 +23,12 @@ function App() {
                         alt="National glass distribution"
                     />
                 </a>
+                {/*h1 heading */}
                 <Typography variant="h1" color={"white"} gutterBottom>
                     Furnace Dashboard
                 </Typography>
             </header>
+
             <main>
                 <Grid container spacing={2} marginBlock={"1.5rem"}>
                     <Grid item xs={12}>
