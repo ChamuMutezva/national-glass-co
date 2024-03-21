@@ -44,7 +44,7 @@ function ProgressDetails() {
                 </Select>
             </FormControl>
 
-            <Grid container spacing={2}>
+            <Grid container marginTop={"1rem"} spacing={2}>
                 <OneDay />
                 <SevenDays />
                 <Month />
